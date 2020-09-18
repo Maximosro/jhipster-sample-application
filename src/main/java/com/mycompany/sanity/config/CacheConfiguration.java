@@ -49,6 +49,18 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.sanity.domain.User.class.getName() + ".authorities");
             createCache(cm, com.mycompany.sanity.domain.PersistentToken.class.getName());
             createCache(cm, com.mycompany.sanity.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, com.mycompany.sanity.domain.Region.class.getName());
+            createCache(cm, com.mycompany.sanity.domain.Country.class.getName());
+            createCache(cm, com.mycompany.sanity.domain.Location.class.getName());
+            createCache(cm, com.mycompany.sanity.domain.Department.class.getName());
+            createCache(cm, com.mycompany.sanity.domain.Department.class.getName() + ".employees");
+            createCache(cm, com.mycompany.sanity.domain.Task.class.getName());
+            createCache(cm, com.mycompany.sanity.domain.Task.class.getName() + ".jobs");
+            createCache(cm, com.mycompany.sanity.domain.Employee.class.getName());
+            createCache(cm, com.mycompany.sanity.domain.Employee.class.getName() + ".jobs");
+            createCache(cm, com.mycompany.sanity.domain.Job.class.getName());
+            createCache(cm, com.mycompany.sanity.domain.Job.class.getName() + ".tasks");
+            createCache(cm, com.mycompany.sanity.domain.JobHistory.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
