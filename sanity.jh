@@ -1,0 +1,38 @@
+
+entity Sanity {
+	id Long
+    desc String
+    creationDate Instant
+    detailKey Long
+}
+
+entity Detail{
+	id Long
+    type TypeSanity
+	desc String
+    startDate Date
+    endDate Date
+    link String
+}
+
+relationship OneToMany{
+	Detail to Sanity{detailKey}
+}
+
+entity MedicAppointment{
+	id Long
+    desc String
+    active Boolean
+    date TimeStamp
+    localization String
+    observations String
+    type TypeMedicApp
+}
+
+enum TypeSanity {
+    BAJA, PARTE, JUSTIFICANTE, ALTA, RECETA, OTROS
+}
+enum TypeMedicApp{
+	REVISION, OPERACION, ADMINISTRATIVA, OTROS
+}
+
